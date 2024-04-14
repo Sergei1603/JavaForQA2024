@@ -5,13 +5,13 @@ import ru.shop.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductRepository {
-    private List<Product> products = new ArrayList<>();
+public class ProductRepository implements IRepository<Product> {
+    private final List<Product> products = new ArrayList<>();
 
     public void save(Product prod){
         products.add(prod);
     }
     public List<Product> findAll(){
-        return products;
+        return new ArrayList<>(products);
     }
 }

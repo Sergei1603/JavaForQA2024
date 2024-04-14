@@ -7,10 +7,10 @@ import ru.shop.repository.ProductRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductService {
-    private ProductRepository repository;
+public class ProductService implements IService<Product> {
+    private final ProductRepository repository;
 
-    ProductService(ProductRepository rep){
+    public ProductService(ProductRepository rep){
         repository = rep;
     }
 
