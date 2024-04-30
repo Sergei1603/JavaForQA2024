@@ -21,4 +21,4 @@ create table if not exists "order"
     product_id  uuid not null references product (id),
     count       int  not null,
     amount      int  not null
-);
+    );

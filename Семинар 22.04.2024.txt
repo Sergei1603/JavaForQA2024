@@ -144,10 +144,10 @@ SQL скрипт для создания таблиц resources/init.sql
 17 Аннотируеум сущености
 17.1 Product
 
-// Сущности храниться в БД
-@Entity
-// Задаём таблицы для хранения
-@Table(name = "product")
+    // Сущности храниться в БД
+    @Entity
+    // Задаём таблицы для хранения
+    @Table(name = "product")
 public class Product {
 
     // первичный ключ

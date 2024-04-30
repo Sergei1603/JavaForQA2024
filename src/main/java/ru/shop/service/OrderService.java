@@ -1,7 +1,9 @@
 package ru.shop.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import ru.shop.exception.BadOrderCountException;
+import ru.shop.exception.EntityNotFoundException;
 import ru.shop.model.Customer;
 import ru.shop.model.Order;
 import ru.shop.model.Product;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 @RequiredArgsConstructor
 public class OrderService {
 
@@ -47,4 +50,7 @@ public class OrderService {
         return repository.findAll();
     }
 
+    public Order getById(UUID id) {
+        return repository.findById(id).orElseThrow(EntityNotFoundException::new);
+    }
 }

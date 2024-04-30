@@ -18,7 +18,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ProductService productService = new ProductService(
+   /*     ProductService productService = new ProductService(
                 new ProductRepository()
         );
 
@@ -89,7 +89,7 @@ public class Main {
         for (Order order : orderService.findByCustomer(petr)) {
             System.out.println(order);
         }
-        System.out.println("Petr's orders total amount = " + orderService.getTotalCustomerAmount(petr));
+        System.out.println("Petr's orders total amount = " + orderService.getTotalCustomerAmount(petr));*/
 
     }
 }
